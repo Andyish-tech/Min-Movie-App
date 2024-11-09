@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+    }
+    header {
+      text-align: center;
+      background-color: rgb(78, 78, 78);
+      height: 10vh;
+      margin-top: -25px;
+      width: 100%;
+      padding: 25px 0px;
+    }
+    .header-nav{
+        width: 101%;
+        margin-left: -10px;
+        padding: -20px;
+    }
+    header h1 {
+            color: rgb(146, 21, 21);
+        }
+        header p{
+            color: white;
+            margin-top: -15px;
+        }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+      /* gap: 30px; */
+      top: 0;
+      z-index: 1;
+      /* height: 60px; */
+      background-color: rgb(54, 52, 52);
+      padding: 30px 30px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      
+    }
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    #action h2 {
+        text-align: center;
+    }
+    .card {
+      /* border: 1px solid #ccc; */
+      border-radius: 8px;
+     
+      width: 200px;
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.35;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 5px;
+      width: 292px;
+      height: 350px;
+     
+    }
+    .card :hover{
+        transform: scale(1.1);
+    }
+    section {
+      margin-top: 40px;
+      padding: 20px;
+      border-radius: 8px;
+      color: white;
+    }
+    #comedy h2{
+        text-align: center;
+    }
+    #drama h2{
+        text-align: center;
+    }
+    footer{
+        text-align: center;
+        background-color: rgb(54, 52, 52);
+        color: white;
+        padding: 20px;
+        margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header-nav">
+    <header>
+        <h1>CineWord</h1>
+        <p>Your gateway to the Movie Universe!</p>
+      </header>
+    
+      <nav>
+        <a href="#action" onclick="navigateTo('action')">Action</a>
+        <a href="#comedy" onclick="navigateTo('comedy')">Comedy</a>
+        <a href="#drama" onclick="navigateTo('drama')">Drama</a>
+      </nav>
+</div>
+
+  <section id="action">
+    <h2>Action Movies</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="action/action-movie-ad-design-template-49cae0ff516599ec8637843f2ad23978.jpg" alt="Action Movie 1">
+        <h3>Revenge of the fallen</h3>
+      </div>
+      <div class="card">
+        <img src="action/images (2).jpeg" alt="Action Movie 2">
+        <h3>The School For Good and evil</h3>
+    
+      </div>
+      <div class="card">
+        <img src="action/trends-international-marvel-cinematic-universe-black-panther-group-one-sheet_u-L-Q1RG4B20.jpg" alt="Action Movie 3">
+        <h3>Black Panther</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="comedy">
+    <h2>Comedy Movies</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="comedy/ace-ventura-when-nature-calls-movie-poster.jpg" alt="Comedy Movie 1">
+        <h3>Ace-ventura</h3>
+      </div>
+      <div class="card">
+        <img src="comedy/images (1).jpeg" alt="Comedy Movie 2">
+        <h3>Good Boys</h3>
+      </div>
+      <div class="card">
+        <img src="comedy/images.jpeg" alt="Comedy Movie 3">
+        <h3>Ace-ventura Pet Ditective</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="drama">
+    <h2>Drama Movies</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="Drama/images (1).jpeg" alt="Drama Movie 1">
+        <h3>shades of Minds</h3>
+      </div>
+      <div class="card">
+        <img src="Drama/images (2).jpeg" alt="Drama Movie 2">
+        <h3>Santana</h3>
+      </div>
+      <div class="card">
+        <img src="Drama/images.jpeg" alt="Drama Movie 3">
+        <h3>Broken Mirrors</h3>
+      </div>
+    </div>
+  </section>
+<footer>
+    <p>&copy;2024 cineword.alright reserved</p>
+</footer>
+  <script>
+    function navigateTo(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+</body>
+</html>
